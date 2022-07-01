@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: movies-api
+  data:
+    mongodb:
+      authentication-database: admin
+      username: root
+      password: example
+      database: moviesdb
+      port: 27017
+      host: localhost
+     # uri: mongodb://localhost:27017/moviesdb
+  main:
+    allow-circular-references: true
+
+
+
+    mongodb:
+
+       #your_root_user     (default->rootuser)
+      password: #your_root_password (default->rootpass)
+       #your_db_name
+       #your_port              (default->)
+       #your_host              (default->)
