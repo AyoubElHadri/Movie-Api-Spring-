@@ -10,9 +10,11 @@ import org.springframework.context.annotation.Bean;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 @SpringBootApplication
 public class MovieApiApplication {
@@ -25,10 +27,12 @@ public class MovieApiApplication {
 /*	@Bean
 	CommandLineRunner runner(MovieRepository repository){
 		return args -> {
-			List<Movie.Comment> comments =new ArrayList<>();
-			comments.stream().map(comment -> comments).collect(Collectors.toList());
-			Movie movie = new Movie(
-					);
+
+			Stream.of("Mike","Hector","Job").forEach(name->{
+				Movie.Comment comment=new Movie.Comment(name,"Great Movie", LocalDateTime.now());
+			});
+
+			Movie movie = new Movie();
 			movie.setTitle("Godfather");
 			movie.setDirector("Francis Ford Coppola");
 			movie.setYear("1972");
